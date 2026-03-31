@@ -47,9 +47,7 @@ export default function AdminOrders() {
 
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null)
 
-  const getStatusColor = (
-    status: string
-  ): 'bg-yellow-100 text-yellow-800' | 'bg-blue-100 text-blue-800' | 'bg-purple-100 text-purple-800' | 'bg-green-100 text-green-800' => {
+  const getStatusColor = (status: string): string => {
     switch (status) {
       case 'pending':
         return 'bg-yellow-100 text-yellow-800'
